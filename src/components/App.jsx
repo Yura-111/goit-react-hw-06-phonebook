@@ -3,7 +3,7 @@ import { Title } from './Title/AppTitle';
 import { ContactForm } from './ContactForm/ContactForm';
 import { SectionTitle } from './Title/SectionTitle';
 import { Filter } from './Filter/Filter';
-import { ContactList } from './FriendList.jsx/FriendList';
+import { ContactList } from './FriendList/FriendList';
 import { Box } from './Box';
 
 export const App = () => {
