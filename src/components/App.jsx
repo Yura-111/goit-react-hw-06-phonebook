@@ -1,16 +1,20 @@
+import { ToastContainer } from 'react-toastify';
+import { Title } from './Title/AppTitle';
+import { ContactForm } from './ContactForm/ContactForm';
+import { SectionTitle } from './Title/SectionTitle';
+import { Filter } from './Filter/Filter';
+import { ContactList } from './FriendList.jsx/FriendList';
+import { Box } from './Box';
+
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
+    <Box maxWidth="1000px" my={0} mx="auto" px={4}>
+      <Title text="Phonebook" />
+      <ContactForm />
+      <SectionTitle text="Contacts" />
+      <Filter />
+      <ContactList />
+      <ToastContainer />
+    </Box>
   );
 };
