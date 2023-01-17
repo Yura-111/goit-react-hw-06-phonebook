@@ -5,40 +5,45 @@ export const FormContacts = styled(Form)`
 display: flex;
 flex-direction: column;
 width: 400px;
-border: ${p => p.theme.borders.normal};
+border: 1px solid;
+padding: 16px;
  
 `;
 
 export const Input = styled(Field)`
-  display: block;
-  margin-top: ${p => p.theme.space[3]}px;
-  height: 30px;
-  width: 70%;
-  box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.3);
-  border: 3px solid ${props => props.theme.colors.secondary};
-  border-radius: ${props => props.theme.radii.normal};
+width: 300px;
+font-size: 14px;
+margin-bottom: 32px;
+padding: 8px;
+
+:focus {
+  border-color: ${p => p.theme.colors.primary};
+  outline: none;
+}
 `;
 
 export const NameInput = styled.label`
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 20px;
   color: ${p => p.theme.colors.text};
-  font-size: ${props => props.theme.fontSizes[5]}px;
-  margin-bottom: ${p => p.theme.space[2]}px;
-  margin-left: ${props => props.theme.space[3]}px;
 `;
 
 export const ButtonAdd = styled.button`
-  width: 280px;
-  height: 30px;
+  display: block;
+  width: 120px;
+  height: 40px;
   margin-top: ${props => props.theme.space[3]}px;
-  margin-left: ${props => props.theme.space[3]}px;
-  margin-bottom: ${props => props.theme.space[3]}px;
-  padding: 4px 8px;
-  font-size: ${props => props.theme.fontSizes[2]}px;
-  background-color: ${props => props.theme.colors.highlight};
+  padding: 4px 16px;
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  background-color: ${props => props.theme.colors.primary};
   border-radius: ${props => props.theme.radii.normal};
-  border: ${props => props.theme.borders.normal};
+  cursor: pointer;
 
-  :focus {
-    box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.3);
+  transition: all 250ms linear;
+  :hover {
+    background-color: ${p => p.theme.colors.secondary};
   }
 `;

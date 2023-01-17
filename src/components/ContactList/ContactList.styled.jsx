@@ -6,11 +6,21 @@ export const ListItem = styled.li`
 `;
 export const ButtonDelete = styled.button`
 width: 100px;
-height: 20px;
-margin-left: ${props => props.theme.space[2]}px;
-  background-color: ${props => props.theme.colors.accent};
-  border: ${props => props.theme.borders.normal};
+height: 30px;
+  margin-top: ${props => props.theme.space[3]}px;
+  margin-left: ${props => props.theme.space[3]}px;
+  margin-bottom: ${props => props.theme.space[3]}px;
+  padding: 4px 16px;
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  background-color: ${props => props.theme.colors.primary};
   border-radius: ${props => props.theme.radii.normal};
+  cursor: pointer;
+
+  transition: all 250ms linear;
+  :hover {
+    background-color: ${p => p.theme.colors.secondary};
+  }
 `;
 
 export const TextContact = styled.p`

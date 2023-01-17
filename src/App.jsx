@@ -9,13 +9,7 @@ export const App = () => {
     
   return (
     <Box
-      height='100vh'
-      display='flex'
-      flexDirection='column'
-      justifyContent='center'
-      alignItems='center'
-      fontSize='40'
-      color='#010101'
+    maxWidth="1000px" my={0} mx="auto" px={4}
     >
       <h1>Phonebook</h1>
       <ContactForm />
