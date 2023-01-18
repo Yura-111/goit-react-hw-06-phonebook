@@ -15,12 +15,12 @@ const ContactList = () => {
       );
     };
 
-    const Contacts = filterContacts();
+    const contactsFiltered = filterContacts();
     
     
      return (
        <ul>
-         {Contacts.map(({ id, name, number }) => {
+         {contactsFiltered.map(({ id, name, number }) => {
         return (
           <ListItem key={id}>
             <TextContact>{name}: {number}</TextContact>
